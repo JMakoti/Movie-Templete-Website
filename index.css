@@ -338,6 +338,7 @@ header section {
     bottom: 10px;
     color: #fff;
     left: 45%;
+    right: 0;
 }
 
 header section .cards {
@@ -351,6 +352,10 @@ header section .cards {
     scroll-behavior: smooth;
     z-index: 100;
 
+}
+
+section:has(.card:nth-child(-n+3)) {
+    justify-content: flex-end;
 }
 
 header section .cards::-webkit-scrollbar {

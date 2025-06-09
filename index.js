@@ -156,6 +156,34 @@ function setupSearchFilter() {
     });
 }
 
+// filter movies based on type
+document.querySelectorAll('.logo_ul ul li a').forEach(link => {
+    link.addEventListener('click', function (e) {
+        e.preventDefault();
+        const type = this.textContent.trim();
+        let filteredMovies;
+        if (type === "Home") {
+            filteredMovies = movies;
+        } else if (type === "Series") {
+            filteredMovies = movies.filter(m => (m.type || "").toLowerCase() === "series");
+        } else if (type === "Movies") {
+            filteredMovies = movies.filter(m => (m.type || "").toLowerCase() === "movie");
+        } else if (type === "Kids") {
+            filteredMovies = movies.filter(m => (m.type || "").toLowerCase() === "kids");
+        } else {
+            filteredMovies = movies;
+        }
+        if (filteredMovies.length > 0) {
+            currentMovieIndex = 0;
+            renderMainContent(filteredMovies[0]);
+        } else {
+            document.getElementById('main-content').innerHTML = "<p>No movies found.</p>";
+        }
+        renderPopularCards(filteredMovies);
+        renderSearchResults(filteredMovies);
+    });
+});
+
 // Manual slider event listeners
 const nextBtn = document.getElementById('next');
 const prevBtn = document.getElementById('prev');
