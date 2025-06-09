@@ -1,115 +1,6 @@
-// let left_btn = document.getElementsByClassName("bx-chevron-left")[0];
-// let right_btn = document.getElementsByClassName("bx-chevron-right")[0];
-// let cards = document.getElementsByClassName("cards")[0];
-// let search = document.getElementsByClassName("search")[0];
-// let search_input = document.getElementById("search_input");
-// left_btn.addEventListener("click",()=>{
-//     cards.scrollLeft -= 140;
-// })
-// right_btn.addEventListener("click",()=>{
-//     cards.scrollLeft += 140;
-// })
-
-
-// let json_url = "movies.json"
-
-// fetch(json_url).then(Response => Response.json())
-//     .then((data)=>{
-//         data.forEach((ele,i) => {
-//             let { title ,imdb ,year ,sposter,bposter,href,genre,extract} = ele;
-//             let card = document.createElement('a');
-//             card.classList.add('card');
-//             card.href = href;
-//             card.innerHTML = `
-//             <img src="${sposter}" alt="${title}" class="poster">
-//             <div class="card_body">
-//                 <img src="${bposter}" alt="">
-//                 <div class="cont">
-//                     <h4>${title}</h4>
-//                     <div class="sub">
-//                         <p>${genre},${year}</p>
-//                         <h3><span>IMDB</span><i class='bx bxs-star' ></i>${imdb}</h3>
-//                     </div>
-//                 </div>
-//             </div>            
-//             `
-//             cards.appendChild(card);  
-//         });
-
-//         // document.getElementById('title').innerText = data[0].title;
-//         // // document.getElementById('title')[0].src = data[0].title;
-//         document.getElementById('title').src = data[0].title1;
-//         document.getElementsByTagName('video')[0].src = data[0].trailer;
-//         document.getElementById('plot').innerText = data[0].extract;
-//         document.getElementById('gen').innerText = data[0].genre;
-//         document.getElementById('date').innerText = data[0].year;
-//         document.getElementById('rate').innerHtml =`<span>IMDB</span><i class='bx bxs-star' ></i>${data[0].imdb}`;
-
-
-//         // search data
-//         data.forEach(element=>{
-//             let { title ,imdb ,year ,sposter,href,genre,} = element;
-//             let card = document.createElement('a');
-//             card.classList.add('card');
-//             card.href = href;
-//             card.innerHTML = `
-//             <img src="${sposter}" alt="${title}">
-//                         <div class="cont">
-//                             <h3>${title}</h3>
-//                             <p>${genre} ,${year}, <span>IMDB</span><i class='bx bxs-star' ></i>${imdb}</p>
-//                         </div>            
-//             `
-//             search.appendChild(card);
-//         });
-
-//         //search filter
-//         search_input.addEventListener('keyup',()=>{
-//             let filter = search_input.value.toUpperCase();
-//             let a = search.getElementsByTagName('a');
-
-//             for (let index = 0; index < a.length; index++) {
-//                 let b = a[index].getElementsByClassName('cont')[0];
-//                 let TextValue = b.textContent || b.innerText;
-//                 if (TextValue.toUpperCase().indexOf(filter)>-1) {
-//                     a[index].style.display ="flex";
-//                     search.style.visibility ="visible"
-//                     search.style.opacity =1;
-                    
-//                 } else {
-//                     a[index].style.display = "none"
-                    
-//                 }
-//                 if (search_input.value == 0) {
-//                     search.style.visibility ="hidden"
-//                     search.style.opacity = 0;                    
-//                 }
-                
-//             }
-//         });
-
-
-//         //play and pause video
-//         let video = document.getElementsByTagName('video')[0];
-//         let play = document.getElementById('play');
-
-//         play.addEventListener('click' ,()=>{
-//             if (video.paused) {
-//                 video.play();
-//                 play.innerHTML = `play <i class='bx bx-pause-circle'></i>`
-                
-//             } else {
-//                 video.pause();
-//                 play.innerHTML = `watch <i class='bx bx-play-circle'></i>`
-//             }
-//         })
-        
-
-//         //filter series
-//     }) 
-
-// let movies = []; // Will hold movies from movies.json
-let movies = "movies.json"
+let movies = "movies.json";
 let currentMovieIndex = 0;
+let autoSliderInterval = null;
 
 // Fetch movies.json and initialize
 fetch('movies.json')
@@ -120,37 +11,87 @@ fetch('movies.json')
         renderPopularCards(movies);
         renderSearchResults(movies);
         setupSearchFilter();
+        // startAutoSlider();
     });
+
 
 function renderMainContent(movie) {
     document.getElementById('main-content').innerHTML = `
-        <img id="title" src="${movie.title1}" alt="">
-        <p id="plot">${movie.extract}</p>
+        <img id="title" src="${movie.title1 || ''}" alt="">
+        <p id="plot">${movie.extract || ''}</p>
         <div class="details">
             <h6>${movie.type || ''}</h6>
-            <h5 id="gen">${movie.genre}</h5>
-            <h4 id="date">${movie.year}</h4>
-            <h3 id="rate"><span>IMDB</span><i class='bx bxs-star'></i>${movie.imdb}</h3>
+            <h5 id="gen">${Array.isArray(movie.genre) ? movie.genre.join(', ') : movie.genre || ''}</h5>
+            <h4 id="date">${movie.year || ''}</h4>
+            <h3 id="rate"><span>IMDB</span><i class='bx bxs-star'></i>${movie.imdb || ''}</h3>
         </div>
     `;
-    // Update video source
-    document.querySelector('header video').src = movie.trailer;
+    // Animate video fade out, change source, then fade in
+    const video = document.querySelector('header video');
+    video.classList.add('fade-out');
+    setTimeout(() => {
+        video.onended = null; // Remove previous event to avoid stacking
+        video.src = movie.trailer && movie.trailer.trim() !== "" ? movie.trailer : "videos/default.mp4";
+        video.load();
+        video.autoplay = true;
+        video.muted = true; // Ensure autoplay works in all browsers
+        video.play().catch(() => { }); // Try to play immediately
+        video.oncanplay = function () {
+            video.play().catch(() => { });
+        };
+        video.onloadedmetadata = function () {
+            // After trailer duration, prepend last card to the front (same as next button)
+            if (autoSliderInterval) clearTimeout(autoSliderInterval);
+            autoSliderInterval = setTimeout(() => {
+                movies.push(movies.shift());
+                renderPopularCards(movies, 'slide-left');
+                currentMovieIndex = 0;
+                renderMainContent(movies[currentMovieIndex]);
+            }, video.duration * 1000);
+        };
+        video.onended = function () {
+            // Also prepend last card to the front when trailer ends
+            movies.push(movies.shift());
+            renderPopularCards(movies, 'slide-left');
+            currentMovieIndex = 0;
+            renderMainContent(movies[currentMovieIndex]);
+        };
+        video.classList.remove('fade-out');
+        video.classList.add('fade-in');
+        setTimeout(() => {
+            video.classList.remove('fade-in');
+        }, 100); // match transition duration
+    }, 400); // fade out duration
 }
 
-function renderPopularCards(movies) {
+
+function renderPopularCards(movies, animation = null) {
+    const cardsContainer = document.getElementById('popular-cards');
+    // Remove previous animation classes
+    cardsContainer.classList.remove('slide-left', 'slide-right');
+
     const cards = movies.map((movie, idx) => `
         <a href="#" class="card" data-idx="${idx}">
-            <img src="${movie.sposter}" alt="" class="poster">
+            <img src="${movie.sposter || movie.poster || ''}" alt="" class="poster">
         </a>
     `).join('');
-    document.getElementById('popular-cards').innerHTML = cards;
+    cardsContainer.innerHTML = cards;
+
+    // Trigger animation if specified
+    if (animation) {
+        // Force reflow to restart animation
+        void cardsContainer.offsetWidth;
+        cardsContainer.classList.add(animation);
+    }
 
     // Add click listeners
     document.querySelectorAll('.card').forEach(card => {
-        card.addEventListener('click', function(e) {
+        card.addEventListener('click', function (e) {
             e.preventDefault();
             const idx = this.getAttribute('data-idx');
-            renderMainContent(movies[idx]);
+            currentMovieIndex = Number(idx);
+            renderMainContent(movies[currentMovieIndex]);
+            resetAutoSlider();
         });
     });
 }
@@ -166,17 +107,19 @@ function renderSearchResults(movies) {
         card.href = `#`;
         card.setAttribute('data-idx', idx);
         card.innerHTML = `
-            <img src="${movie.sposter}" alt="${movie.title}">
+            <img src="${movie.sposter || movie.poster || ''}" alt="${movie.title || ''}">
             <div class="cont">
-                <h3>${movie.title}</h3>
-                <p>${movie.genre} ,${movie.year}, <span>IMDB</span><i class='bx bxs-star'></i>${movie.imdb}</p>
+                <h3>${movie.title || ''}</h3>
+                <p>${Array.isArray(movie.genre) ? movie.genre.join(', ') : movie.genre || ''} ,${movie.year || ''}, <span>IMDB</span><i class='bx bxs-star'></i>${movie.imdb || ''}</p>
             </div>
         `;
-        card.addEventListener('click', function(e) {
+        card.addEventListener('click', function (e) {
             e.preventDefault();
+            currentMovieIndex = idx;
             renderMainContent(movies[idx]);
-            document.querySelector('.search').style.visibility = "hidden";
-            document.querySelector('.search').style.opacity = 0;
+            search.style.visibility = "hidden";
+            search.style.opacity = 0;
+            resetAutoSlider();
         });
         search.appendChild(card);
     });
@@ -210,5 +153,31 @@ function setupSearchFilter() {
             search.style.visibility = "hidden";
             search.style.opacity = 0;
         }
+    });
+}
+
+// Manual slider event listeners
+const nextBtn = document.getElementById('next');
+const prevBtn = document.getElementById('prev');
+
+if (nextBtn) {
+    nextBtn.addEventListener('click', function () {
+        // Move first card to the end (append)
+        movies.push(movies.shift());
+        renderPopularCards(movies, 'slide-right');
+        currentMovieIndex = 0;
+        renderMainContent(movies[currentMovieIndex]);
+        resetAutoSlider();
+    });
+
+}
+if (prevBtn) {
+    prevBtn.addEventListener('click', function () {
+        // Move last card to the front (prepend)
+        movies.unshift(movies.pop());
+        renderPopularCards(movies, 'slide-left');
+        currentMovieIndex = 0;
+        renderMainContent(movies[currentMovieIndex]);
+        resetAutoSlider();
     });
 }

@@ -244,47 +244,42 @@ header nav .search_user .search-results.visible {
 header .content {
     position: relative;
     color: #fff;
-    margin-top: 40px;
+    margin-top: 30px;
     padding-left: 50px;
-}
-
-header .content h1 {
-    font-size: 50px;
 }
 
 header .content #title {
     width: 200px;
 }
 
-header .content p {
-    font-size: 11px;
-    width: 350px;
-    word-break: break-all;
+header .content #plot{
+    font-size: 14px;
+    width: 400px;
 }
 
 header .content .details {
     display: flex;
     align-items: center;
+    font-size: 12;
     margin-top: 10px;
 
 }
 
 header .content .details h6 {
     color: rgb(255, 255, 255, .8);
-    font-size: 10px;
     margin-right: 10px;
+     font-size: 12;
 }
 
 header .content .details h5 {
     color: rgb(142, 238, 48);
-    font-size: 10px;
     margin-right: 10px;
 }
 
 header .content .details h4 {
     color: #fff;
-    font-size: 10px;
     margin-right: 10px;
+     font-size: 12;
 }
 
 header .content .details h3 {
@@ -292,15 +287,15 @@ header .content .details h3 {
     display: flex;
     align-items: center;
     /* justify-content: center; */
-    font-size: 10px;
+     font-size: 12;
 }
 
 header .content .details h3 span {
     background: yellow;
     color: #000;
     padding: 0px 3px;
-    margin: 0px 5px 0px 5px;
-    font-weight: 500;
+    margin: 0px 3px;
+    font-weight: 400;
 }
 
 header .content .details h3 span i {
@@ -335,22 +330,27 @@ header .content .btns .bx {
 /* section */
 header section {
     position: absolute;
-    width: 100%;
+    /* width: 100%; */
+    width: max-content;
+    z-index: 100;
     height: auto;
     padding: 0px 50px;
     bottom: 10px;
     color: #fff;
+    left: 45%;
 }
 
 header section .cards {
     position: relative;
     width: 100%;
-    height: 200px;
+    height: 170px;
     margin-top: 10px;
     display: flex;
     align-items: center;
     overflow-x: auto;
     scroll-behavior: smooth;
+    z-index: 100;
+
 }
 
 header section .cards::-webkit-scrollbar {
@@ -359,51 +359,82 @@ header section .cards::-webkit-scrollbar {
 
 header section .cards .card {
     position: relative;
-    min-width: 130px;
-    height: 180px;
-    border-radius: 8px;
+    min-width: 100px;
+    height: 165px;
+    border-radius: 10px;
     margin-right: 10px;
     background: #000;
     transition: .3s linear;
+    flex-shrink: 0;
 }
 
 header section .cards .card .poster {
     width: 100%;
     height: 100%;
-    border-radius: 8px;
-    position: relative;
+    border-radius: 10px;
+    object-fit: cover;
 }
 
 /* chevron */
-header section .bx-chevron-left,
-.bx-chevron-right {
+
+.arrows{
     position: absolute;
-    top: 50%;
-    left: 3%;
-    width: 25px;
-    height: 25px;
-    background: rgb(255, 255, 255, .3);
-    color: #fff;
+    top: 80%;
+    right: 52%;
+    z-index: 100;
+    width: 300px;
+    max-width: 30%;
     display: flex;
+    gap: 10px;
     align-items: center;
-    justify-content: center;
+}
+.arrows button{
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
-    font-size: 12px;
-    cursor: pointer;
-    transition: .3s linear;
-    z-index: 999999999;
+    background-color: #eee4;
+    border: none;
+    color: #fff;
+    font-family: monospace;
+    font-weight: bold;
+    transition: .5s;
+}
+.arrows button:hover{
+    background-color: #fff;
+    color: #000;
+}
+
+/* video animation */
+header video {
+    transition: opacity 0.6s cubic-bezier(0.4,0,0.2,1);
+    opacity: 1;
+}
+
+header video.fade-out {
     opacity: 0;
 }
 
-header section .bx-chevron-right {
-    left: unset;
-    right: 3%;
-}
-
-header section:hover .bx-chevron-right {
+header video.fade-in {
     opacity: 1;
 }
 
-header section:hover .bx-chevron-left {
-    opacity: 1;
+
+/* card animation */
+    
+#popular-cards.slide-left {
+    animation: slideLeft 0.5s;
+}
+#popular-cards.slide-right {
+    animation: slideRight 0.5s;
+}
+
+@keyframes slideLeft {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(-40px); opacity: 0.7; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+@keyframes slideRight {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(40px); opacity: 0.7; }
+    100% { transform: translateX(0); opacity: 1; }
 }

@@ -21,6 +21,25 @@
     "extract": "A spaceship crash lands on prehistoric Earth, leaving only two survivors. Soon, they must survive against the hostile terrain and vicious creatures."
   },
   {
+    "title": "Moana 2",
+    "title1": "titles/moana_2.png",
+    "imdb": "10.4",
+    "year": "2024",
+    "sposter": "https://upload.wikimedia.org/wikipedia/en/thumb/7/73/Moana_2_poster.jpg/250px-Moana_2_poster.jpg",
+    "bposter": "",
+    "genre": [
+      "Animated"
+    ],
+    "type": "Kids",
+    "url": "",
+    "trailer": "videos/moana_2.mp4",
+    "low": "480ph",
+    "medium": "720.ph",
+    "high": "1080ph",
+    "href": "Moana_2",
+    "extract": "After receiving an unexpected call from her wayfinding ancestors, a strong-willed girl journeys with her crew to the far seas of Oceania and into dangerous, long-lost waters for an adventure unlike anything she has ever faced."
+  },
+  {
     "title": "Upload",
     "title1": "titles/upload.png",
     "imdb": "9.4",
@@ -38,6 +57,25 @@
     "high": "1080ph",
     "href": "Upload(Tv_series)",
     "extract": "In the year 2033, people have the ability to upload themselves to a virtual world after their death. Nathan chooses to live in the virtual Lakeview after his unexpected death."
+  },
+  {
+    "title": "Avatar: The Way of Water",
+    "title1": "titles/avatar.png",
+    "imdb": "9.4",
+    "year": 2022,
+    "sposter": "https://upload.wikimedia.org/wikipedia/en/5/54/Avatar_The_Way_of_Water_poster.jpg",
+    "bposter": "https://upload.wikimedia.org/wikipedia/en/5/54/Avatar_The_Way_of_Water_poster.jpg",
+    "genre": [
+      "Science Fiction"
+    ],
+    "type": "Movie",
+    "url": "",
+    "trailer": "videos/Avatar__The_Way_of_Water___Official_Trailer(1080p).mp4",
+    "low": "480ph",
+    "medium": "720.ph",
+    "high": "1080ph",
+    "href": "Avatar:_The_Way_of_Water",
+    "extract": "Avatar: The Way of Water is a 2022 American epic science fiction film directed and produced by James Cameron. He co-wrote the screenplay with Rick Jaffa and Amanda Silver from a story the trio wrote with Josh Friedman and Shane Salerno. Distributed by 20th Century Studios, it is the sequel to Avatar (2009) and the second installment in the Avatar film series. Cast members Sam Worthington, Zoe Saldaña, Stephen Lang, Joel David Moore, CCH Pounder, Giovanni Ribisi, Dileep Rao, and Matt Gerald reprise their roles from the original film, with Sigourney Weaver returning in an additional role while Kate Winslet joined the cast. It follows a blue-skinned humanoid Na'vi named Jake Sully (Worthington) as he and his family, under renewed human threat, seek refuge with the aquatic Metkayina clan of Pandora, a habitable exomoon on which they live."
   },
   {
     "title": "Beast",
@@ -92,7 +130,7 @@
     ],
     "type": "Series",
     "url": "",
-    "trailer": "videos/",
+    "trailer": "videos/julie_&_the_phantoms.mp4",
     "low": "480ph",
     "medium": "720.ph",
     "high": "1080ph",
@@ -126,10 +164,12 @@
     "year": "2023",
     "sposter": "https://www.dvdsreleasedates.com/posters/300/T/The-Creator-2023.jpg",
     "bposter": "https://preview.redd.it/in-gareth-edwards-the-creator-2023-despite-being-the-v0-ztzpc8dnvgvb1.png?auto=webp&s=07a91e9556e9f3009b7b47edb34146a96b814780",
-    "genre": "Sci-Fi",
+    "genre": [
+      "Sci-Fi"
+    ],
     "type": "Movie",
     "url": "",
-    "trailer": "videos/tomp3.cc - The Creator_1080p.mp4",
+    "trailer": "videos/the_creator.mp4",
     "low": "480ph",
     "medium": "720ph",
     "high": "1080ph",
@@ -144,8 +184,8 @@
     "bposter": "https://dcupdates.org/wp-content/uploads/2023/08/photo_2023-08-28_22-13-57.jpg",
     "type": "Movie",
     "url": "",
-    "trailer": "",
-    "genres": [
+    "trailer": "videos/Aquaman2.mp4",
+    "genre": [
       "Superhero"
     ],
     "href": "Aquaman_and_the_Lost_Kingdom",
@@ -166,7 +206,7 @@
     ],
     "type": "Series",
     "url": "",
-    "trailer": "videos/",
+    "trailer": "videos/black_knight.mp4",
     "low": "480ph",
     "medium": "720.ph",
     "high": "1080ph",
