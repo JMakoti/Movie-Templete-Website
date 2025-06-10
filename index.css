@@ -42,15 +42,36 @@ header::after {
     z-index: -1;
 }
 
-header video {
+/* #youtube-player {
     position: absolute;
     width: 135%;
     align-items: center;
     height: 200%;
     top: -50%;
+    pointer-events: none;
     z-index: -1;
+} */
 
-}
+header iframe {
+    position: absolute;
+    width: 135%;
+    align-items: center;
+    height: 200%;
+    top: -50%;
+    pointer-events: none;
+    z-index: -1;
+}         
+
+
+/* header iframe {
+    position: absolute;
+    width: 135%;
+    align-items: center;
+    height: 200%;
+    top: -50%;
+    pointer-events: none;
+    z-index: -1;
+} */
 
 
 /*nav*/
@@ -252,7 +273,7 @@ header .content #title {
     width: 200px;
 }
 
-header .content #plot{
+header .content #plot {
     font-size: 14px;
     width: 400px;
 }
@@ -268,7 +289,7 @@ header .content .details {
 header .content .details h6 {
     color: rgb(255, 255, 255, .8);
     margin-right: 10px;
-     font-size: 12;
+    font-size: 12;
 }
 
 header .content .details h5 {
@@ -279,7 +300,7 @@ header .content .details h5 {
 header .content .details h4 {
     color: #fff;
     margin-right: 10px;
-     font-size: 12;
+    font-size: 12;
 }
 
 header .content .details h3 {
@@ -287,7 +308,7 @@ header .content .details h3 {
     display: flex;
     align-items: center;
     /* justify-content: center; */
-     font-size: 12;
+    font-size: 12;
 }
 
 header .content .details h3 span {
@@ -382,7 +403,7 @@ header section .cards .card .poster {
 
 /* chevron */
 
-.arrows{
+.arrows {
     position: absolute;
     top: 80%;
     right: 52%;
@@ -393,7 +414,8 @@ header section .cards .card .poster {
     gap: 10px;
     align-items: center;
 }
-.arrows button{
+
+.arrows button {
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -404,14 +426,15 @@ header section .cards .card .poster {
     font-weight: bold;
     transition: .5s;
 }
-.arrows button:hover{
+
+.arrows button:hover {
     background-color: #fff;
     color: #000;
 }
 
 /* video animation */
 header video {
-    transition: opacity 0.6s cubic-bezier(0.4,0,0.2,1);
+    transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1);
     opacity: 1;
 }
 
@@ -425,21 +448,43 @@ header video.fade-in {
 
 
 /* card animation */
-    
+
 #popular-cards.slide-left {
     animation: slideLeft 0.5s;
 }
+
 #popular-cards.slide-right {
     animation: slideRight 0.5s;
 }
 
 @keyframes slideLeft {
-    0% { transform: translateX(0); }
-    50% { transform: translateX(-40px); opacity: 0.7; }
-    100% { transform: translateX(0); opacity: 1; }
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(-40px);
+        opacity: 0.7;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
+
 @keyframes slideRight {
-    0% { transform: translateX(0); }
-    50% { transform: translateX(40px); opacity: 0.7; }
-    100% { transform: translateX(0); opacity: 1; }
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(40px);
+        opacity: 0.7;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }

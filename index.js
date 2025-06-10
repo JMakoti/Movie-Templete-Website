@@ -27,18 +27,19 @@ function renderMainContent(movie) {
         </div>
     `;
     // Animate video fade out, change source, then fade in
-    const video = document.querySelector('header video');
+    const video = document.querySelector('header iframe');
+    if (!video) return; // Ensure video element exists
     video.classList.add('fade-out');
     setTimeout(() => {
         video.onended = null; // Remove previous event to avoid stacking
         video.src = movie.trailer && movie.trailer.trim() !== "" ? movie.trailer : "videos/default.mp4";
-        video.load();
-        video.autoplay = true;
-        video.muted = true; // Ensure autoplay works in all browsers
-        video.play().catch(() => { }); // Try to play immediately
-        video.oncanplay = function () {
-            video.play().catch(() => { });
-        };
+        // video.load();
+        // video.autoplay = true;
+        // video.muted = true; // Ensure autoplay works in all browsers
+        // video.play().catch(() => { }); // Try to play immediately
+        // video.oncanplay = function () {
+        //     video.play().catch(() => { });
+        // };
         video.onloadedmetadata = function () {
             // After trailer duration, prepend last card to the front (same as next button)
             if (autoSliderInterval) clearTimeout(autoSliderInterval);
@@ -48,6 +49,7 @@ function renderMainContent(movie) {
                 currentMovieIndex = 0;
                 renderMainContent(movies[currentMovieIndex]);
             }, video.duration * 1000);
+            console.log(`Video duration: ${video.duration} seconds`);
         };
         video.onended = function () {
             // Also prepend last card to the front when trailer ends
