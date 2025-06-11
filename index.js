@@ -32,9 +32,9 @@ function renderMainContent(movie) {
     document.getElementById('main-content').innerHTML = `
      <div id="youtube-player" class="youtube-bg"></div>
         <img id="title" src="${movie.title1 || ''}" alt="">
+        <h3 class="company">${movie.company || ''}</h3>
         <p id="plot">${movie.extract || ''}</p>
         <div class="details">
-            <h6>${movie.type || ''}</h6>
             <h5 id="gen">${Array.isArray(movie.genre) ? movie.genre.join(', ') : movie.genre || ''}</h5>
             <h4 id="date">${movie.year || ''}</h4>
             <h3 id="rate"><span>IMDB</span><i class='bx bxs-star'></i>${movie.imdb || ''}</h3>

@@ -2,7 +2,7 @@
   {
     "title": "65",
     "title1": "titles/65_logo.png",
-    "imdb": "9.4",
+    "imdb": "5.4",
     "year": "2023",
     "sposter": "https://upload.wikimedia.org/wikipedia/en/thumb/c/c4/65_film_teaser_poster.jpg/220px-65_film_teaser_poster.jpg",
     "bposter": "https://images.firstpost.com/wp-content/uploads/2023/03/drivin.jpg",
@@ -18,12 +18,13 @@
     "medium": "720.ph",
     "high": "1080ph",
     "href": "65_(film)",
-    "extract": "A spaceship crash lands on prehistoric Earth, leaving only two survivors. Soon, they must survive against the hostile terrain and vicious creatures."
+    "company": "Columbia Pictures",
+    "extract": "After a crash landing on a mysterious planet, pilot Mills discovers he's actually stranded on Earth — 65 million years in the past. With only one other survivor, he must navigate a prehistoric world full of deadly dinosaurs to survive."
   },
   {
     "title": "Moana 2",
     "title1": "titles/moana_2.png",
-    "imdb": "10.4",
+    "imdb": "N/A",
     "year": "2024",
     "sposter": "https://upload.wikimedia.org/wikipedia/en/thumb/7/73/Moana_2_poster.jpg/250px-Moana_2_poster.jpg",
     "bposter": "",
@@ -37,12 +38,13 @@
     "medium": "720.ph",
     "high": "1080ph",
     "href": "Moana_2",
-    "extract": "After receiving an unexpected call from her wayfinding ancestors, a strong-willed girl journeys with her crew to the far seas of Oceania and into dangerous, long-lost waters for an adventure unlike anything she has ever faced."
+    "company": "Walt Disney Animation Studios",
+    "extract": "Moana sets sail once again, answering a call from her ancestors to journey across dangerous, forgotten seas. Alongside old and new friends, she faces powerful oceanic forces and uncovers deeper truths about her destiny as a wayfinder."
   },
   {
     "title": "Upload",
     "title1": "titles/upload.png",
-    "imdb": "9.4",
+    "imdb": "7.9",
     "year": "2020 - ",
     "sposter": "https://resizing.flixster.com/hktUo21Cmz7Su3m-jIkbpVm6-GY=/ems.cHJkLWVtcy1hc3NldHMvdHZzZXJpZXMvUlRUVjY5Njk3OS53ZWJw",
     "bposter": "https://images-na.ssl-images-amazon.com/images/S/pv-target-images/3d744671922d16f805645b7d9a855f3988869e734c3729303a438bc6be5cc768._RI_TTW_SX720_FMjpg_.jpg",
@@ -56,12 +58,13 @@
     "medium": "720.ph",
     "high": "1080ph",
     "href": "Upload(Tv_series)",
-    "extract": "In the year 2033, people have the ability to upload themselves to a virtual world after their death. Nathan chooses to live in the virtual Lakeview after his unexpected death."
+    "company": "Amazon Studios",
+    "extract": "In a near-future world, humans can upload their consciousness to a virtual afterlife. When Nathan dies unexpectedly, he’s uploaded to the luxurious digital heaven of Lakeview—only to uncover secrets about his death while adapting to digital eternity."
   },
   {
     "title": "Avatar: The Way of Water",
     "title1": "titles/avatar.png",
-    "imdb": "9.4",
+    "imdb": "7.6",
     "year": 2022,
     "sposter": "https://upload.wikimedia.org/wikipedia/en/5/54/Avatar_The_Way_of_Water_poster.jpg",
     "bposter": "https://upload.wikimedia.org/wikipedia/en/5/54/Avatar_The_Way_of_Water_poster.jpg",
@@ -75,32 +78,34 @@
     "medium": "720.ph",
     "high": "1080ph",
     "href": "Avatar:_The_Way_of_Water",
-    "extract": "Avatar: The Way of Water is a 2022 American epic science fiction film directed and produced by James Cameron. He co-wrote the screenplay with Rick Jaffa and Amanda Silver from a story the trio wrote with Josh Friedman and Shane Salerno. Distributed by 20th Century Studios, it is the sequel to Avatar (2009) and the second installment in the Avatar film series. Cast members Sam Worthington, Zoe Saldaña, Stephen Lang, Joel David Moore, CCH Pounder, Giovanni Ribisi, Dileep Rao, and Matt Gerald reprise their roles from the original film, with Sigourney Weaver returning in an additional role while Kate Winslet joined the cast. It follows a blue-skinned humanoid Na'vi named Jake Sully (Worthington) as he and his family, under renewed human threat, seek refuge with the aquatic Metkayina clan of Pandora, a habitable exomoon on which they live."
+    "company": "20th Century Studios",
+    "extract": "Years after uniting with the Na'vi, Jake Sully and Neytiri must protect their family as a new threat arises. They journey to a water-based clan of Pandora, facing battles and emotional turmoil in a struggle for survival."
   },
   {
     "title": "Beast",
     "title1": "titles/beast_title.png",
-    "imdb": "8.9",
+    "imdb": "5.6",
     "year": "2022",
     "sposter": "https://upload.wikimedia.org/wikipedia/en/thumb/8/81/Beast_2022_American_poster.jpg/220px-Beast_2022_American_poster.jpg",
     "bposter": "https://i0.wp.com/thesheist.com/wp-content/uploads/2022/09/Beast.jpg?fit=1560%2C910&ssl=1",
+    "genre": [
+      "Action",
+      "Horror"
+    ],
     "type": "Movie",
     "url": "",
     "trailer": "https://www.youtube.com/embed/oQMc7Sq36mI?autoplay=1&mute=1&controls=0&modestbranding=1&rel=0",
     "low": "480ph",
     "medium": "720.ph",
     "high": "1080ph",
-    "genre": [
-      "Action",
-      "Horror"
-    ],
     "href": "Beast_(2022_American_film)",
-    "extract": "Beast is a 2022 survival action horror film directed by Baltasar Kormákur from a screenplay by Ryan Engle, based on a story by Jaime Primak Sullivan. The film stars Idris Elba, Iyana Halley, Leah Sava Jeffries, and Sharlto Copley. It follows a widowed father and his two teenage daughters who visit a South African game reserve but must fight to survive when they are stalked and attacked by a ferocious, rogue, man-killing lion."
+    "company": "Universal Pictures",
+    "extract": "A widowed father takes his two daughters to a South African game reserve for healing, only to be hunted by a rogue lion. As they fight to survive, they must rely on their instincts and each other."
   },
   {
     "title": "Strange World",
     "title1": "titles/strange_world.png",
-    "imdb": "9.4",
+    "imdb": "5.6",
     "year": 2022,
     "sposter": "https://upload.wikimedia.org/wikipedia/en/f/fe/Strange_World_poster.jpg",
     "bposter": "https://media.licdn.com/dms/image/D4D12AQEHuOoRQ1e-hg/article-cover_image-shrink_720_1280/0/1671386512570?e=2147483647&v=beta&t=-W9DOn2AtJzSmRkbFCk49FdMboauEWSVl5tJEa1DEio",
@@ -116,12 +121,13 @@
     "medium": "720.ph",
     "high": "1080ph",
     "href": "Strange_World_(film)",
-    "extract": "Three generations of a legendary family of explorers will find themselves in an uncharted land with strange creatures. If they want to survive from the numerous dangers, they must bridge their differences and work together."
+    "company": "Walt Disney Pictures",
+    "extract": "The Clade family of explorers ventures into a mysterious underground world filled with bizarre creatures. As they navigate this vibrant ecosystem, they must resolve personal differences to save their home and discover what truly matters."
   },
   {
     "title": "Julie and the Phantoms",
     "title1": "titles/julie_phantoms.png",
-    "imdb": "8.4/10",
+    "imdb": "8.4",
     "year": 2020,
     "sposter": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRJj2PsLJ14yqO-8LUQwXdtYCTkXUrnqm0_qCVkU4A_rJ_iioWi",
     "bposter": "https://media1.popsugar-assets.com/files/thumbor/4GdEFSbN0kPISqfikgn2MY8cVGU=/2x163:1198x791/fit-in/1200x1200/filters:format_auto():quality(85):upscale()/2020/09/10/792/n/1922283/6fc05eba5f5a6a0179c977.22963184_.jpg",
@@ -135,12 +141,13 @@
     "medium": "720.ph",
     "high": "1080ph",
     "href": "Julie and the Phantoms(Tv_series)",
-    "extract": "Teenager Julie finds her passion for music and life while helping the Phantoms, a trio of ghostly guys, become the band they were never able to be."
+    "company": "Netflix",
+    "extract": "After the death of her mother, teen musician Julie rediscovers her passion when she forms a band with a group of ghostly teen boys from 1995. Together, they chase their musical dreams across time and spirit."
   },
   {
     "title": "Puss in Boots: The Last Wish",
     "title1": "titles/puss-in-boots.png",
-    "imdb": "9.4",
+    "imdb": "7.8",
     "year": 2022,
     "sposter": "https://upload.wikimedia.org/wikipedia/en/7/78/Puss_in_Boots_The_Last_Wish_poster.jpg",
     "bposter": "https://www.newsfromthecouch.com/wp-content/uploads/2022/12/Puss-in-Boots-The-Last-Wish-Cover.jpg",
@@ -155,12 +162,13 @@
     "medium": "720.ph",
     "high": "1080ph",
     "href": "Puss_in_Boots:_The_Last_Wish",
-    "extract": "Puss in Boots discovers that his passion for adventure has taken its toll when he learns that he has burnt through eight of his nine lives. Puss sets out on an epic journey to find the mythical Last Wish and restore his nine lives."
+    "company": "DreamWorks Animation",
+    "extract": "After burning through eight of his nine lives, Puss in Boots embarks on a daring quest to find the mythical Last Wish. With time running out, he must face new enemies and old friends in an epic journey of redemption and courage."
   },
   {
     "title": "The Creator",
     "title1": "titles/the_creator_logo.png",
-    "imdb": "7.1/10",
+    "imdb": "7.1",
     "year": "2023",
     "sposter": "https://www.dvdsreleasedates.com/posters/300/T/The-Creator-2023.jpg",
     "bposter": "https://preview.redd.it/in-gareth-edwards-the-creator-2023-despite-being-the-v0-ztzpc8dnvgvb1.png?auto=webp&s=07a91e9556e9f3009b7b47edb34146a96b814780",
@@ -173,31 +181,33 @@
     "low": "480ph",
     "medium": "720ph",
     "high": "1080ph",
-    "extract": "As a future war between the human race and artificial intelligence rages on, ex-special forces agent Joshua is recruited to hunt down and kill the Creator, the elusive architect of advanced AI. The Creator has developed a mysterious weapon that has the power to end the war and all of mankind. As Joshua and his team of elite operatives venture into enemy-occupied territory, they soon discover the world-ending weapon is actually an AI in the form of a young child."
+    "company": "20th Century Studios",
+    "extract": "In a war between humans and AI, ex-soldier Joshua is tasked with destroying a powerful weapon. But when he discovers the weapon is a child-like AI, his mission becomes a moral dilemma that could decide the fate of humanity."
   },
   {
     "title": "Aquaman and the Lost Kingdom",
     "title1": "titles/Aquaman.png",
+    "imdb": "5.7",
     "year": 2023,
-    "imdb": "7.1/10",
     "sposter": "https://upload.wikimedia.org/wikipedia/en/thumb/4/4a/Aquaman_and_the_Lost_Kingdom_poster.jpg/250px-Aquaman_and_the_Lost_Kingdom_poster.jpg",
     "bposter": "https://dcupdates.org/wp-content/uploads/2023/08/photo_2023-08-28_22-13-57.jpg",
-    "type": "Movie",
-    "url": "",
-    "trailer": "https://www.youtube.com/embed/UGc5Tzz19UY?autoplay=1&mute=1&controls=0&modestbranding=1&rel=0",
     "genre": [
       "Superhero"
     ],
+    "type": "Movie",
+    "url": "",
+    "trailer": "https://www.youtube.com/embed/UGc5Tzz19UY?autoplay=1&mute=1&controls=0&modestbranding=1&rel=0",
     "href": "Aquaman_and_the_Lost_Kingdom",
-    "extract": "Aquaman and the Lost Kingdom is an upcoming American superhero film based on the DC Comics character Aquaman. Produced by DC Studios, the Safran Company, and Atomic Monster Productions, and set for distribution by Warner Bros. Pictures, it is intended to be the sequel to Aquaman (2018), and the 15th and final installment in the DC Extended Universe (DCEU). The film is directed by James Wan from a screenplay written by David Leslie Johnson-McGoldrick, and stars Jason Momoa as Arthur Curry / Aquaman alongside Amber Heard, Willem Dafoe, Patrick Wilson, Dolph Lundgren, Yahya Abdul-Mateen II, Temuera Morrison, and Nicole Kidman.",
+    "company": "Warner Bros. Pictures",
     "low": "480ph",
-    "medium": "720ph",
-    "high": "1080ph"
+    "medium": "720.ph",
+    "high": "1080ph",
+    "extract": "When an ancient evil resurfaces, Aquaman must forge uneasy alliances and protect Atlantis from destruction. Balancing royal duties and family, Arthur faces enemies from both land and sea in a battle that could change the fate of the ocean world."
   },
   {
     "title": "Black Knight",
     "title1": "titles/Black_Knight.png",
-    "imdb": "6.4/10",
+    "imdb": "6.3",
     "year": 2023,
     "sposter": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNC4YyniyVENznL1U4q6r7_DAtBcIWhvkf0wv9iw6rrKx8kIUh",
     "bposter": "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202304/f1722adb-0eaa-4f44-a4f6-efd5f6827ff9-sixteen_nine.jpeg?VersionId=TVMzHM.bHT3_6k6tXSjgZ3RAqb1rTefp&size=690:388",
@@ -211,6 +221,7 @@
     "medium": "720.ph",
     "high": "1080ph",
     "href": "Black Knight (South Korean TV series)",
-    "extract": "In a dystopian future devastated by air pollution, the survival of humanity depends on a group of deliverymen known as the Black Knights who navigate the wastelands using unconventional means."
+    "company": "Netflix",
+    "extract": "In a polluted dystopian future where oxygen is scarce, elite delivery drivers known as Black Knights risk their lives to transport supplies. When a legendary Knight meets a refugee with a secret, they must fight a corrupt regime to change their world."
   }
 ]

@@ -286,10 +286,10 @@ header .content .details {
 
 }
 
-header .content .details h6 {
-    color: rgb(255, 255, 255, .8);
-    margin-right: 10px;
-    font-size: 12;
+header .content .company {
+    color: red;
+    font-size: 16;
+    margin: 5px;
 }
 
 header .content .details h5 {
