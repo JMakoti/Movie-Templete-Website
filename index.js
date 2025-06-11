@@ -1,4 +1,4 @@
-let movies = "movies.json";
+let movies = [];
 let currentMovieIndex = 0;
 let autoSliderInterval = null;
 
@@ -14,9 +14,23 @@ fetch('movies.json')
         // startAutoSlider();
     });
 
+// Load YouTube iframe API script
+function loadYouTubeAPI() {
+    const tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+    document.body.appendChild(tag);
+}
+loadYouTubeAPI();
+
+// Called automatically by YouTube API
+function onYouTubeIframeAPIReady() {
+    renderMainContent(movies[currentMovieIndex] || {});
+}
+window.onYouTubeIframeAPIReady = onYouTubeIframeAPIReady;
 
 function renderMainContent(movie) {
     document.getElementById('main-content').innerHTML = `
+     <div id="youtube-player" class="youtube-bg"></div>
         <img id="title" src="${movie.title1 || ''}" alt="">
         <p id="plot">${movie.extract || ''}</p>
         <div class="details">
