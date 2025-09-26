@@ -57,26 +57,15 @@ header::after {
     z-index: -1;
 } */
 
-header iframe {
+#youtube-player {
     position: absolute;
     width: 135%;
-    align-items: center;
     height: 200%;
     top: -50%;
+    left: -17.5%;
     pointer-events: none;
     z-index: -1;
-}         
-
-
-/* header iframe {
-    position: absolute;
-    width: 135%;
-    align-items: center;
-    height: 200%;
-    top: -50%;
-    pointer-events: none;
-    z-index: -1;
-} */
+}
 
 
 /*nav*/
