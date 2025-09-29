@@ -98,7 +98,7 @@ function renderPopularCards(movies, animation = null) {
     cardsContainer.classList.remove('slide-left', 'slide-right');
 
     const cards = movies.map((movie, idx) => `
-        <a href="#" class="card" data-idx="${idx}">
+        <a href="#" class="card ${idx === 0 ? 'active' : ''}" data-idx="${idx}">
             <img src="${movie.sposter || movie.poster || ''}" alt="${movie.title || 'Movie poster'}" class="poster">
         </a>
     `).join('');
@@ -112,6 +112,8 @@ function renderPopularCards(movies, animation = null) {
     document.querySelectorAll('.card').forEach(card => {
         card.addEventListener('click', function (e) {
             e.preventDefault();
+            document.querySelectorAll('.card').forEach(c => c.classList.remove('active'));
+            this.classList.add('active');
             const idx = this.getAttribute('data-idx');
             currentMovieIndex = Number(idx);
             renderMainContent(movies[currentMovieIndex]);

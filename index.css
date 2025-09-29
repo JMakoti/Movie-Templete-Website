@@ -394,6 +394,12 @@ header section .cards .card .poster {
     object-fit: cover;
 }
 
+header section .cards .card.active {
+    border: 3px solid #00bdff;
+    box-shadow: 0 0 15px rgba(0, 189, 255, 0.5);
+    transform: scale(1.05);
+}
+
 /* chevron */
 
 .arrows {
